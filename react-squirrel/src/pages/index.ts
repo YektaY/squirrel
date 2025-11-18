@@ -6,4 +6,5 @@ export * from './SnapshotDetailsPage';
 export * from './SnapshotListPage';
 export * from './SnapshotComparisonPage';
 export * from './PVBrowserPage';
+export * from './PVDetailsPage';
 export * from './TagPage';

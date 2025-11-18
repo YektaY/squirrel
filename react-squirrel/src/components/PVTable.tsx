@@ -74,11 +74,15 @@ export const PVTable: React.FC<PVTableProps> = ({ pvs, searchFilter, onSelection
   const handleSelectAll = () => {
     if (selectAll) {
       setSelectedPVs(new Set());
-      onSelectionChange?.([]);
+      if (onSelectionChange) {
+        onSelectionChange([]);
+      }
     } else {
       const allUuids = new Set(filteredPVs.map(pv => pv.uuid));
       setSelectedPVs(allUuids);
-      onSelectionChange?(filteredPVs);
+      if (onSelectionChange) {
+        onSelectionChange(filteredPVs);
+      }
     }
     setSelectAll(!selectAll);
   };

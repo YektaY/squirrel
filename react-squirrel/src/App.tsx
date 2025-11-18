@@ -13,6 +13,10 @@ const theme = createTheme({
     secondary: {
       main: '#666666',
     },
+    background: {
+      default: '#f5f5f5',
+      paper: '#ffffff',
+    },
   },
   typography: {
     fontFamily: [
@@ -24,6 +28,19 @@ const theme = createTheme({
       'Arial',
       'sans-serif',
     ].join(','),
+  },
+  components: {
+    MuiTableCell: {
+      styleOverrides: {
+        root: {
+          borderBottom: '1px solid rgba(224, 224, 224, 1)',
+        },
+        head: {
+          backgroundColor: '#fafafa',
+          fontWeight: 600,
+        },
+      },
+    },
   },
 });
 

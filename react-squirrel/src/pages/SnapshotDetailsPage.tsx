@@ -56,7 +56,7 @@ export const SnapshotDetailsPage: React.FC<SnapshotDetailsPageProps> = ({
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          height: '100vh',
+          height: '100%',
         }}
       >
         <Stack spacing={2} alignItems="center">
@@ -74,9 +74,8 @@ export const SnapshotDetailsPage: React.FC<SnapshotDetailsPageProps> = ({
       sx={{
         display: 'flex',
         flexDirection: 'column',
-        height: '100vh',
+        height: '100%',
         p: 2,
-        bgcolor: 'background.default',
       }}
     >
       <SnapshotHeader snapshot={snapshot} onBack={onBack} />

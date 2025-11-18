@@ -51,14 +51,17 @@ export const SnapshotListPage: React.FC<SnapshotListPageProps> = ({
   };
 
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh', p: 2 }}>
+    <Box sx={{ display: 'flex', flexDirection: 'column', height: '100%', p: 2 }}>
       <Stack direction="row" spacing={2} sx={{ mb: 2 }} alignItems="center">
+        <Typography variant="h5" fontWeight="bold" sx={{ flexGrow: 1 }}>
+          Snapshots
+        </Typography>
         <TextField
           value={searchText}
           onChange={(e) => setSearchText(e.target.value)}
           placeholder="Search title..."
           size="small"
-          sx={{ maxWidth: 400, flex: 1 }}
+          sx={{ maxWidth: 400 }}
           InputProps={{
             endAdornment: (
               <InputAdornment position="end">
